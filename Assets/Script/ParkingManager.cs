@@ -52,7 +52,7 @@ public class ParkingManager : MonoBehaviour
                 remainingChances--;
                 UpdateChancesText();
 
-                if (remainingChances <= 0)
+                if (remainingChances == 0)
                 {
                     LoseGame();
                 }
@@ -77,7 +77,7 @@ public class ParkingManager : MonoBehaviour
             }
         }
 
-        if (wheelsOnPlane >= requiredWheels)
+        if (wheelsOnPlane == requiredWheels)
         {
             WinGame();
         }
@@ -114,7 +114,7 @@ public class ParkingManager : MonoBehaviour
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(false);
-        }else if(remainingChances ==1 ){
+        }else if(remainingChances == 1){
             star1.SetActive(true);
             star2.SetActive(false);
             star3.SetActive(false);
